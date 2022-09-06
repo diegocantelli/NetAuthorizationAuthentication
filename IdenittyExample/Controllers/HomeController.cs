@@ -7,6 +7,7 @@ using Microsoft.Extensions.Logging;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Security.Claims;
+using System.Threading.Tasks;
 
 namespace IdenittyExample.Controllers
 {
@@ -39,13 +40,33 @@ namespace IdenittyExample.Controllers
             return View();
         }
 
-        public IActionResult Login(string username, string password)
+        public async Task<IActionResult> Login(string username, string password)
         {
+            var user = await _userManager.FindByNameAsync(username);
+
+            if(user != null)
+            {
+                //faz login
+            }
+
             return RedirectToAction("Index");
         }
 
-        public IActionResult Register(string username, string password)
+        public async Task<IActionResult> Register(string username, string password)
         {
+            var user = new IdentityUser()
+            {
+                UserName = username,
+                Email = ""
+            };
+
+            // tenta criar o usuário definido acima
+            var result = await _userManager.CreateAsync(user);
+
+            if (result.Succeeded)
+            {
+
+            }
             return RedirectToAction("Index");
         }
 
