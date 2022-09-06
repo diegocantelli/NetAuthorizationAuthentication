@@ -43,6 +43,12 @@ namespace IdenittyExample
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 
+            services.ConfigureApplicationCookie(config =>
+            {
+                config.Cookie.Name = "Identity.Cookie";
+                config.LoginPath = "/Home/Login";
+            });
+
             //services.AddAuthentication("CookieAuth")
             //    .AddCookie("CookieAuth", config =>
             //    {

@@ -90,6 +90,11 @@ namespace IdenittyExample.Controllers
             return View();
         }
 
+        public IActionResult Secret()
+        {
+            return View();
+        }
+
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
