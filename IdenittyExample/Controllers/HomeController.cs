@@ -15,13 +15,16 @@ namespace IdenittyExample.Controllers
     {
         private readonly ILogger<HomeController> _logger;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
 
         public HomeController(
             ILogger<HomeController> logger,
-            UserManager<IdentityUser> userManager)
+            UserManager<IdentityUser> userManager,
+            SignInManager<IdentityUser> signInManager)
         {
             _logger = logger;
             _userManager = userManager;
+            _signInManager = signInManager;
         }
 
         public IActionResult Index()
@@ -40,18 +43,25 @@ namespace IdenittyExample.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Login(string username, string password)
         {
             var user = await _userManager.FindByNameAsync(username);
 
             if(user != null)
             {
-                //faz login
+                var signInResult = await _signInManager.PasswordSignInAsync(username, password, false, false);
+
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
             }
 
             return RedirectToAction("Index");
         }
 
+        [HttpPost]
         public async Task<IActionResult> Register(string username, string password)
         {
             var user = new IdentityUser()
@@ -65,7 +75,12 @@ namespace IdenittyExample.Controllers
 
             if (result.Succeeded)
             {
+                var signInResult = await _signInManager.PasswordSignInAsync(username, password, false, false);
 
+                if (signInResult.Succeeded)
+                {
+                    return RedirectToAction("Index");
+                }
             }
             return RedirectToAction("Index");
         }
@@ -73,6 +88,12 @@ namespace IdenittyExample.Controllers
         public IActionResult Register()
         {
             return View();
+        }
+
+        public async Task<IActionResult> Logout()
+        {
+            await _signInManager.SignOutAsync();
+            return RedirectToAction("Index");
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
