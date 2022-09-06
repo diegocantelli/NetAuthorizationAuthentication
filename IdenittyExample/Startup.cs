@@ -32,7 +32,14 @@ namespace IdenittyExample
             });
 
             //Cria a infra necessária para os repositórios do Identity
-            services.AddIdentity<IdentityUser, IdentityRole>()
+            services.AddIdentity<IdentityUser, IdentityRole>(config => 
+            {
+                config.Password.RequireDigit = false;
+                config.Password.RequiredLength = 3;
+                config.Password.RequireLowercase = false;
+                config.Password.RequireNonAlphanumeric = false;
+                config.Password.RequireUppercase = false;
+            })
                 .AddEntityFrameworkStores<AppDbContext>()
                 .AddDefaultTokenProviders();
 

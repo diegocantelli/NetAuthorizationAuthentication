@@ -53,3 +53,11 @@ C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreap
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\IdenittyExample.dll
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\IdenittyExample.pdb
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\IdenittyExample.genruntimeconfig.cache
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Core.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Identity.Stores.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs

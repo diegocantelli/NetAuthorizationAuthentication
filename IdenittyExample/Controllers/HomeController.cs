@@ -71,7 +71,7 @@ namespace IdenittyExample.Controllers
             };
 
             // tenta criar o usuário definido acima
-            var result = await _userManager.CreateAsync(user);
+            var result = await _userManager.CreateAsync(user, password);
 
             if (result.Succeeded)
             {
