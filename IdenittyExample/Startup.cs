@@ -2,6 +2,7 @@ using IdenittyExample.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -29,6 +30,12 @@ namespace IdenittyExample
             {
                 config.UseInMemoryDatabase("Memory");
             });
+
+            //Cria a infra necessária para os repositórios do Identity
+            services.AddIdentity<IdentityUser, IdentityRole>()
+                .AddEntityFrameworkStores<AppDbContext>()
+                .AddDefaultTokenProviders();
+
             //services.AddAuthentication("CookieAuth")
             //    .AddCookie("CookieAuth", config =>
             //    {
