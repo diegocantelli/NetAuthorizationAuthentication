@@ -75,17 +75,30 @@ namespace IdenittyExample.Controllers
 
             if (result.Succeeded)
             {
-                var signInResult = await _signInManager.PasswordSignInAsync(username, password, false, false);
+                var code = await _userManager.GenerateEmailConfirmationTokenAsync(user);
 
-                if (signInResult.Succeeded)
-                {
-                    return RedirectToAction("Index");
-                }
+                var link = Url.Action(nameof(VerifyEmail), new { userId = user.Id, code });
+                //var signInResult = await _signInManager.PasswordSignInAsync(username, password, false, false);
+
+                //if (signInResult.Succeeded)
+                //{
+                //    return RedirectToAction("Index");
+                //}
             }
             return RedirectToAction("Index");
         }
 
+        public async Task<IActionResult> VerifyEmail(string userId, string code)
+        {
+            return View();
+        }
+
         public IActionResult Register()
+        {
+            return View();
+        }
+
+        public IActionResult EmailVerification()
         {
             return View();
         }
