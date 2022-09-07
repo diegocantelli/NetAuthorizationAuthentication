@@ -15,11 +15,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuthNew\\BasicAuthNew.csproj",
-      "projectName": "BasicAuthNew",
-      "projectPath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuthNew\\BasicAuthNew.csproj",
+      "projectUniqueName": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuth\\BasicAuth.csproj",
+      "projectName": "BasicAuth",
+      "projectPath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuth\\BasicAuth.csproj",
       "packagesPath": "C:\\Users\\Prosoft\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuthNew\\obj\\",
+      "outputPath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuth\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

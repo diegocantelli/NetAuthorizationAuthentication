@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3gDPL98qG3wZ49AgUMHXx+PBkvg19bEVw+mKACFtNlKw5077PCC0uenVwd2OUT+MjOyVfHhT1UMd2N2oWGPzXg==",
+  "dgSpecHash": "8S+hhSsusQnAVFIym6nGwPWUO6Lm8QTebS4tYE/0u4l1uryNlD3Jwa0cKVRMDuH8xf/kYBi9Y1InFLb4een5Og==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuth\\BasicAuth.csproj",
+  "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\BasicAuthNew\\BasicAuthNew.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

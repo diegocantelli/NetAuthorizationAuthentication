@@ -23,7 +23,8 @@ namespace BasicAuth.Controllers
             return View();
         }
 
-        [Authorize]
+        // Sò quem tiver esta policy poderá acessar este endpoint
+        [Authorize(Policy = "Claim.DoB")]
         public IActionResult Privacy()
         {
             return View();
