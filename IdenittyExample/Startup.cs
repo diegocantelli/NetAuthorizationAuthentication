@@ -1,16 +1,13 @@
 using IdenittyExample.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using NETCore.MailKit.Extensions;
+using NETCore.MailKit.Infrastructure.Internal;
 
 namespace IdenittyExample
 {
@@ -49,6 +46,10 @@ namespace IdenittyExample
                 config.Cookie.Name = "Identity.Cookie";
                 config.LoginPath = "/Home/Login";
             });
+
+            //lê a seção email do appsettings e com os valores encontrados faz o mapeamento para o tipo MailKitOptions
+            var mailKitOptions = Configuration.GetSection("Email").Get<MailKitOptions>();
+            services.AddMailKit(config => config.UseMailKit(mailKitOptions));
 
             //services.AddAuthentication("CookieAuth")
             //    .AddCookie("CookieAuth", config =>

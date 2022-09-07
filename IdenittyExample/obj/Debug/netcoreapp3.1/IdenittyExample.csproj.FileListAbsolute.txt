@@ -62,3 +62,10 @@ C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreap
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\Login.cshtml.g.cs
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\Register.cshtml.g.cs
 C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\Secret.cshtml.g.cs
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\MailKit.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\MimeKit.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\NETCore.MailKit.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\BouncyCastle.Crypto.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\EmailVerification.cshtml.g.cs
+C:\Users\Prosoft\source\repos\Authentication\IdenittyExample\obj\Debug\netcoreapp3.1\Razor\Views\Home\VerifyEmail.cshtml.g.cs

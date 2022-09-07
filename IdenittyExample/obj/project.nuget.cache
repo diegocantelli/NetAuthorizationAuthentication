@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "46gmnBqEBsF8YI5k+XDaunYXY1tFdydt68DA4Yk3r2RCpIBg5Zvpgvg86j93fINhSMTYuMp+jTylyIV+G44LOg==",
+  "dgSpecHash": "EhahORKDUA4V/dgi69Vs5mZNv3XFiV/KmwxFv9sbUKqrU/hUwKYTDMNLY2uL7KBehViOLdmgkUEtU9M9bnhrkw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\IdenittyExample\\IdenittyExample.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Prosoft\\.nuget\\packages\\mailkit\\3.2.0\\mailkit.3.2.0.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\3.1.28\\microsoft.aspnetcore.cryptography.internal.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\3.1.28\\microsoft.aspnetcore.cryptography.keyderivation.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.28\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.28.nupkg.sha512",
@@ -19,17 +20,27 @@
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.configuration\\3.1.28\\microsoft.extensions.configuration.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\3.1.28\\microsoft.extensions.configuration.abstractions.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.configuration.binder\\3.1.28\\microsoft.extensions.configuration.binder.3.1.28.nupkg.sha512",
-    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\3.1.28\\microsoft.extensions.dependencyinjection.3.1.28.nupkg.sha512",
-    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\3.1.28\\microsoft.extensions.dependencyinjection.abstractions.3.1.28.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.identity.core\\3.1.28\\microsoft.extensions.identity.core.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.identity.stores\\3.1.28\\microsoft.extensions.identity.stores.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.logging\\3.1.28\\microsoft.extensions.logging.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.1.28\\microsoft.extensions.logging.abstractions.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.options\\3.1.28\\microsoft.extensions.options.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.extensions.primitives\\3.1.28\\microsoft.extensions.primitives.3.1.28.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.netcore.platforms\\2.1.2\\microsoft.netcore.platforms.2.1.2.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\mimekit\\3.2.0\\mimekit.3.2.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\netcore.mailkit\\2.1.0\\netcore.mailkit.2.1.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\portable.bouncycastle\\1.9.0\\portable.bouncycastle.1.9.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\system.collections.immutable\\1.7.1\\system.collections.immutable.1.7.1.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\system.componentmodel.annotations\\4.7.0\\system.componentmodel.annotations.4.7.0.nupkg.sha512",
-    "C:\\Users\\Prosoft\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512"
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.1\\system.diagnostics.diagnosticsource.4.7.1.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.security.cryptography.cng\\4.7.0\\system.security.cryptography.cng.4.7.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.security.cryptography.pkcs\\4.7.0\\system.security.cryptography.pkcs.4.7.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.text.encoding.codepages\\4.5.1\\system.text.encoding.codepages.4.5.1.nupkg.sha512"
   ],
   "logs": []
 }
