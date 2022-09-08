@@ -35,3 +35,11 @@ C:\Users\Prosoft\source\repos\Authentication\server\obj\Debug\netcoreapp3.1\serv
 C:\Users\Prosoft\source\repos\Authentication\server\obj\Debug\netcoreapp3.1\server.pdb
 C:\Users\Prosoft\source\repos\Authentication\server\obj\Debug\netcoreapp3.1\server.genruntimeconfig.cache
 C:\Users\Prosoft\source\repos\Authentication\server\obj\Debug\netcoreapp3.1\server.csproj.CopyComplete
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\Prosoft\source\repos\Authentication\server\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
