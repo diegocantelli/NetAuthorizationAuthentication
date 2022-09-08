@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -58,7 +59,16 @@ namespace BasicAuth
             //registra a DI do handler de claims customizado
             services.AddScoped<IAuthorizationHandler, CustomRequireClaimHandler>();
 
-            services.AddControllersWithViews();
+            services.AddControllersWithViews(config => 
+            {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                    .RequireAuthenticatedUser()
+                    .Build();
+
+                //Adiciona um filtro de autorização em todas as rotas
+                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
