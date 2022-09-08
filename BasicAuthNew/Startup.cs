@@ -67,7 +67,7 @@ namespace BasicAuth
                     .Build();
 
                 //Adiciona um filtro de autorização em todas as rotas
-                config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
+                //config.Filters.Add(new AuthorizeFilter(defaultAuthPolicy));
             });
         }
 
