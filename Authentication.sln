@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oauth", "oauth", "{F85EB1AA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server", "server\server.csproj", "{F90E6C82-2613-4D22-9B94-73BBDFD03A20}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{5830F2FC-989E-4819-A666-D33F664D55DE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{F90E6C82-2613-4D22-9B94-73BBDFD03A20}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F90E6C82-2613-4D22-9B94-73BBDFD03A20}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F90E6C82-2613-4D22-9B94-73BBDFD03A20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5830F2FC-989E-4819-A666-D33F664D55DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5830F2FC-989E-4819-A666-D33F664D55DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5830F2FC-989E-4819-A666-D33F664D55DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5830F2FC-989E-4819-A666-D33F664D55DE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -39,6 +45,7 @@ Global
 		{36136E65-2F28-4C45-A110-F5689A2FDCB8} = {C0C0B907-6103-46F7-B136-AF26AEEB8598}
 		{35DE01DD-1D1C-4E5F-BA93-42BE757A6AEB} = {C0C0B907-6103-46F7-B136-AF26AEEB8598}
 		{F90E6C82-2613-4D22-9B94-73BBDFD03A20} = {F85EB1AA-18C5-4ABA-B131-629D86307CC0}
+		{5830F2FC-989E-4819-A666-D33F664D55DE} = {F85EB1AA-18C5-4ABA-B131-629D86307CC0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B46E514-CF17-4537-B3F5-55CAF27F209E}
