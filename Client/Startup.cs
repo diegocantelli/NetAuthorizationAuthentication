@@ -33,7 +33,16 @@ namespace Client
                 config.DefaultChallengeScheme = "OurServer";
             })
                 .AddCookie("ClientCookie")
-                .AddOAuth("OurServer", config => { });
+                .AddOAuth("OurServer", config => 
+                {
+                    config.ClientId = "client_id";
+                    config.ClientSecret = "client_secret";
+                    config.CallbackPath = "/oauth/callback";
+
+                    //aqui deve ser indicado o enderço do servidor onde será gerado o nosso token
+                    config.AuthorizationEndpoint = "https://localhost:5001/oauth/authorize";
+                    config.TokenEndpoint = "https://localhost:5001/oauth/token";
+                });
             services.AddControllersWithViews();
         }
 
