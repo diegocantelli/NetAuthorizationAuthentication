@@ -41,6 +41,7 @@ namespace server
                             return Task.CompletedTask;
                         }
                     };
+
                     //informações que serão levadas em conta no momento da aplicação validar se o token é válido ou não
                     //se essa parte não estiver configurada, o token não será validado
                     config.TokenValidationParameters = new TokenValidationParameters()
