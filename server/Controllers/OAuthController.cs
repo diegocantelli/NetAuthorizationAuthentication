@@ -1,5 +1,12 @@
 ﻿using Microsoft.AspNetCore.Http.Extensions;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
+using System;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace server.Controllers
 {
@@ -39,9 +46,47 @@ namespace server.Controllers
             return Redirect($"{redirectUri}{query.ToString()}");
         }
 
-        public IActionResult Token()
+        public async Task<IActionResult> Token(
+            string grant_type,
+            string code, 
+            string redirect_uri,
+            string client_id)
         {
-            return View();
+            var claims = new[]
+            {
+                new Claim(JwtRegisteredClaimNames.Sub, "some_id"),
+                new Claim("teste", "teste")
+            };
+
+            var secretBytes = Encoding.UTF8.GetBytes(Constants.Constants.Secret);
+            var key = new SymmetricSecurityKey(secretBytes);
+            var algorithm = SecurityAlgorithms.HmacSha256;
+
+            var signInCredentials = new SigningCredentials(key, algorithm);
+
+            var token = new JwtSecurityToken(
+                Constants.Constants.Issuer,
+                Constants.Constants.Audience,
+                claims,
+                notBefore: DateTime.Now,
+                expires: DateTime.Now.AddHours(1),
+                signInCredentials);
+
+            var access_token = new JwtSecurityTokenHandler().WriteToken(token);
+
+            var responseObject = new
+            {
+                access_token,
+                token_type = "Bearer",
+                raw_claim = "oauthtutorial"
+            };
+
+            var responseJson = JsonConvert.SerializeObject(responseObject);
+            var responseBytes = Encoding.UTF8.GetBytes(responseJson);
+
+            await Response.Body.WriteAsync(responseBytes, 0, responseBytes.Length);
+
+            return Redirect(redirect_uri);
         }
     }
 }
