@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
 
 namespace server
 {
@@ -19,7 +21,19 @@ namespace server
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddAuthentication("OAuth")
-                .AddJwtBearer("OAuth", config => { });
+                .AddJwtBearer("OAuth", config => 
+                {
+                    var secretBytes = Encoding.UTF8.GetBytes(Constants.Constants.Secret);
+                    var key = new SymmetricSecurityKey(secretBytes);
+
+                    //informações que serão levadas em conta no momento da aplicação validar se o token é válido ou não
+                    config.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ValidIssuer = Constants.Constants.Issuer,
+                        ValidAudience = Constants.Constants.Audience,
+                        IssuerSigningKey = key
+                    };
+                });
 
             services.AddControllersWithViews();
         }
