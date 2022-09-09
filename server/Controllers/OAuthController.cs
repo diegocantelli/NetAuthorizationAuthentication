@@ -43,10 +43,14 @@ namespace server.Controllers
             query.Add("code", code);
             query.Add("state", state);
 
+            var queryurl = $"{redirectUri}{query.ToString()}";
+
             return Redirect($"{redirectUri}{query.ToString()}");
         }
 
-        public async Task<IActionResult> Token(
+        //O middleware oAuth está apontando para este endpoint
+        //O middleware sabe o que precisa passar para este endpoint
+        public async Task<string> Token(
             string grant_type,
             string code, 
             string redirect_uri,
@@ -82,11 +86,11 @@ namespace server.Controllers
             };
 
             var responseJson = JsonConvert.SerializeObject(responseObject);
-            var responseBytes = Encoding.UTF8.GetBytes(responseJson);
+            //var responseBytes = Encoding.UTF8.GetBytes(responseJson);
 
-            await Response.Body.WriteAsync(responseBytes, 0, responseBytes.Length);
+            //await Response.Body.WriteAsync(responseBytes, 0, responseBytes.Length);
 
-            return Redirect(redirect_uri);
+            return responseJson;
         }
     }
 }
