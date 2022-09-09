@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -5,6 +6,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace server
 {
@@ -26,7 +28,21 @@ namespace server
                     var secretBytes = Encoding.UTF8.GetBytes(Constants.Constants.Secret);
                     var key = new SymmetricSecurityKey(secretBytes);
 
+                    //configurando o jwt para ler o token da query string
+                    config.Events = new JwtBearerEvents()
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            if (context.Request.Query.ContainsKey("access_token"))
+                            {
+                                context.Token = context.Request.Query["access_token"];
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                     //informações que serão levadas em conta no momento da aplicação validar se o token é válido ou não
+                    //se essa parte não estiver configurada, o token não será validado
                     config.TokenValidationParameters = new TokenValidationParameters()
                     {
                         ValidIssuer = Constants.Constants.Issuer,
