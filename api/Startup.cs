@@ -1,3 +1,5 @@
+using api.AuthRequirement;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -25,6 +27,20 @@ namespace api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddAuthentication();
+            services.AddAuthorization(config =>
+            {
+                var defaultAuthBuilder = new AuthorizationPolicyBuilder();
+                var defaultAuthPolicy = defaultAuthBuilder
+                    .AddRequirements(new JwtRequirement())
+                    .Build();
+            });
+
+            services.AddScoped<IAuthorizationHandler, JwtRequirementHandler>();
+
+            services.AddHttpClient()
+                .AddHttpContextAccessor(); // Permite acessar o HtppContext
+
             services.AddControllers();
         }
 
@@ -40,11 +56,13 @@ namespace api
 
             app.UseRouting();
 
+            app.UseAuthentication();
+
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
             });
         }
     }
