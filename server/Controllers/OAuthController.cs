@@ -50,7 +50,7 @@ namespace server.Controllers
 
         //O middleware oAuth está apontando para este endpoint
         //O middleware sabe o que precisa passar para este endpoint
-        public async Task<string> Token(
+        public async Task<object> Token(
             string grant_type,
             string code, 
             string redirect_uri,
@@ -85,12 +85,12 @@ namespace server.Controllers
                 raw_claim = "oauthtutorial"
             };
 
-            var responseJson = JsonConvert.SerializeObject(responseObject);
+            //var responseJson = JsonConvert.SerializeObject(responseObject);
             //var responseBytes = Encoding.UTF8.GetBytes(responseJson);
-
             //await Response.Body.WriteAsync(responseBytes, 0, responseBytes.Length);
+            //return Redirect(redirect_uri);
 
-            return responseJson;
+            return responseObject;
         }
     }
 }
