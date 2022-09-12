@@ -7,6 +7,7 @@ using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace Client.Controllers
@@ -14,10 +15,14 @@ namespace Client.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly HttpClient _httpClient;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(
+            ILogger<HomeController> logger,
+            IHttpClientFactory httpClientFactory)
         {
             _logger = logger;
+            _httpClient = httpClientFactory.CreateClient();
         }
 
         public IActionResult Index()
@@ -31,6 +36,9 @@ namespace Client.Controllers
             // Para recuperar o token, é necessário configurar corretamente na classe startup a seguinte propriedade:
             // config.SaveTokens = true;
             var token = await HttpContext.GetTokenAsync("access_token");
+
+            _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
+            var serverResponse = await _httpClient.GetAsync("https://localhost:5001/secret/index");
 
             return View();
         }
