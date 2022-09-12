@@ -1,4 +1,5 @@
 ﻿using Client.Models;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -25,8 +26,12 @@ namespace Client.Controllers
         }
 
         [Authorize]
-        public IActionResult Privacy()
+        public async Task<IActionResult> Privacy()
         {
+            // Para recuperar o token, é necessário configurar corretamente na classe startup a seguinte propriedade:
+            // config.SaveTokens = true;
+            var token = await HttpContext.GetTokenAsync("access_token");
+
             return View();
         }
 

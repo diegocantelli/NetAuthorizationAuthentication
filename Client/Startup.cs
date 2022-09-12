@@ -42,6 +42,8 @@ namespace Client
                     //aqui deve ser indicado o enderço do servidor onde será gerado o nosso token
                     config.AuthorizationEndpoint = "https://localhost:5001/oauth/authorize";
                     config.TokenEndpoint = "https://localhost:5001/oauth/token";
+
+                    config.SaveTokens = true;
                 });
             services.AddControllersWithViews();
         }
