@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "g1OlqlNGaKoXS+DJ74F9HQhUjAH5dx51EL4GjyAzqofqmR2BYNmBZE8VU6HICKBeaTVNRH8wrEOq+i8Ux0XKNw==",
+  "dgSpecHash": "IoPLw+zv+BrBE/4FH4seVR7fs2kGaakn/5wCiQw8L5StNgqEQZBXS0NPw/wgkspFF4H0PYu00rh5NWJfRhoN6A==",
   "success": true,
   "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\Client\\Client.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Prosoft\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }

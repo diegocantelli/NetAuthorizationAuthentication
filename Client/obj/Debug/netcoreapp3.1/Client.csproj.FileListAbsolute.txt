@@ -35,3 +35,4 @@ C:\Users\Prosoft\source\repos\Authentication\Client\obj\Debug\netcoreapp3.1\Clie
 C:\Users\Prosoft\source\repos\Authentication\Client\obj\Debug\netcoreapp3.1\Client.pdb
 C:\Users\Prosoft\source\repos\Authentication\Client\obj\Debug\netcoreapp3.1\Client.genruntimeconfig.cache
 C:\Users\Prosoft\source\repos\Authentication\Client\obj\Debug\netcoreapp3.1\Client.csproj.CopyComplete
+C:\Users\Prosoft\source\repos\Authentication\Client\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll

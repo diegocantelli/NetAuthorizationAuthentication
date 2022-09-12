@@ -1,12 +1,16 @@
+using Microsoft.AspNetCore.Authentication.OAuth;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Claims;
+using System.Text;
 using System.Threading.Tasks;
 
 namespace Client
@@ -44,6 +48,26 @@ namespace Client
                     config.TokenEndpoint = "https://localhost:5001/oauth/token";
 
                     config.SaveTokens = true;
+
+                    config.Events = new OAuthEvents()
+                    {
+                        OnCreatingTicket = context =>
+                        {
+                            var accessToken = context.AccessToken;
+                            var base64Payload = accessToken.Split('.')[1];
+                            var bytes = ConvertFromBase64String(base64Payload);
+                            var jsonPayload = Encoding.UTF8.GetString(bytes);
+                            var claims = JsonConvert.DeserializeObject<Dictionary<string, string>>(jsonPayload);
+
+                            foreach (var claim in claims)
+                            {
+                                //Será possível acessar as claims do usuário através de User.Claims
+                                context.Identity.AddClaim(new Claim(claim.Key, claim.Value));
+                            }
+
+                            return Task.CompletedTask;
+                        }
+                    };
                 });
             services.AddControllersWithViews();
         }
@@ -66,6 +90,24 @@ namespace Client
             {
                 endpoints.MapDefaultControllerRoute();
             });
+        }
+
+        private static byte[] ConvertFromBase64String(string input)
+        {
+            if (string.IsNullOrWhiteSpace(input)) return null;
+            try
+            {
+                string working = input.Replace('-', '+').Replace('_', '/'); ;
+                while (working.Length % 4 != 0)
+                {
+                    working += '=';
+                }
+                return Convert.FromBase64String(working);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }
