@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace IdentityServer
 {
-    public static class Configuration
+    public static class ConfigurationClientApis
     {
         public static IEnumerable<ApiResource> GetApis() =>
             new List<ApiResource> { new ApiResource("ApiOne") };

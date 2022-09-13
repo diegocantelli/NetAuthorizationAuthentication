@@ -1,15 +1,17 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace IdentityServer
+namespace ApiOne
 {
     public class Startup
     {
@@ -23,14 +25,9 @@ namespace IdentityServer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //com essas configurações ficará disponível o endpoint que terá informações sobre o identityserver
-            ///.well-known/openid-configuration
-            services.AddIdentityServer()
-                .AddInMemoryApiResources(ConfigurationClientApis.GetApis())
-                .AddInMemoryClients(ConfigurationClientApis.GetClients())
-                .AddDeveloperSigningCredential();
-
-            services.AddControllersWithViews();
+            services.AddAuthentication("Bearer")
+                .AddJwtBearer("Bearer")
+            services.AddControllers();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -40,14 +37,17 @@ namespace IdentityServer
             {
                 app.UseDeveloperExceptionPage();
             }
-            
+
+            app.UseHttpsRedirection();
+
             app.UseRouting();
 
-            app.UseIdentityServer();
+            app.UseAuthorization();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapDefaultControllerRoute();
+                endpoints.MapControllers();
             });
         }
     }
