@@ -11,7 +11,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace ApiOne
+namespace ApiTwo
 {
     public class Startup
     {
@@ -29,7 +29,7 @@ namespace ApiOne
                 .AddJwtBearer("Bearer", config =>
                 {
                     config.Authority = "https://localhost:5010/";
-                    config.Audience = "ApiOne";
+                    config.Audience = "ApiTwo";
                 });
             services.AddControllers();
         }
