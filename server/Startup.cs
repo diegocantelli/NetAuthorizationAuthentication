@@ -5,6 +5,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.IdentityModel.Tokens;
+using System;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -46,6 +47,7 @@ namespace server
                     //se essa parte não estiver configurada, o token não será validado
                     config.TokenValidationParameters = new TokenValidationParameters()
                     {
+                        ClockSkew = TimeSpan.Zero, // o tempo mínimo que o token permanecerá válido ou não será validado novamente
                         ValidIssuer = Constants.Constants.Issuer,
                         ValidAudience = Constants.Constants.Audience,
                         IssuerSigningKey = key

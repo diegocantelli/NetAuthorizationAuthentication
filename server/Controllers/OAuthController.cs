@@ -74,7 +74,7 @@ namespace server.Controllers
                 Constants.Constants.Audience,
                 claims,
                 notBefore: DateTime.Now,
-                expires: DateTime.Now.AddHours(1),
+                expires: DateTime.Now.AddMilliseconds(1),
                 signInCredentials);
 
             var access_token = new JwtSecurityTokenHandler().WriteToken(token);

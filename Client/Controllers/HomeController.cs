@@ -39,7 +39,7 @@ namespace Client.Controllers
 
             _httpClient.DefaultRequestHeaders.Add("Authorization", $"Bearer {token}");
             var serverResponse = await _httpClient.GetAsync("https://localhost:5001/secret/index");
-            var apiResponse = await _httpClient.GetAsync("https://localhost:5005/secret/index");
+            //var apiResponse = await _httpClient.GetAsync("https://localhost:5005/secret/index");
 
             return View();
         }

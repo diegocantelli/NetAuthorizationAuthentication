@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "rSZ+UoQG1xi68OhNK+Bh56XDugxLeXkWvt3uu08v0aIA4Bd2LgPWZsxRpuy1C0ElS23auVZAoUM/mEpYuoSUBw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\IdentityServer\\IdentityServer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Prosoft\\.nuget\\packages\\identitymodel\\4.0.0\\identitymodel.4.0.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\identityserver4\\3.0.2\\identityserver4.3.0.2.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\identityserver4.storage\\3.0.2\\identityserver4.storage.3.0.2.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\3.0.0\\microsoft.aspnetcore.authentication.openidconnect.3.0.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\5.5.0\\microsoft.identitymodel.jsonwebtokens.5.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.identitymodel.logging\\5.5.0\\microsoft.identitymodel.logging.5.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.identitymodel.protocols\\5.5.0\\microsoft.identitymodel.protocols.5.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\5.5.0\\microsoft.identitymodel.protocols.openidconnect.5.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.identitymodel.tokens\\5.5.0\\microsoft.identitymodel.tokens.5.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\newtonsoft.json\\12.0.1\\newtonsoft.json.12.0.1.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.identitymodel.tokens.jwt\\5.5.0\\system.identitymodel.tokens.jwt.5.5.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\system.text.encodings.web\\4.5.0\\system.text.encodings.web.4.5.0.nupkg.sha512"
+  ],
+  "logs": []
+}
