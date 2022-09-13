@@ -25,6 +25,7 @@ namespace ApiTwo.Controllers
             //irá buscar no endpoint /well-known/ as configurações do identity...
             var discoveryDocument = await serverClient.GetDiscoveryDocumentAsync("https://localhost:5010/");
 
+            //esse request terá acesso aos recursos(apis) que possuam o scope ApiOne
             var tokenResponse = await serverClient.RequestClientCredentialsTokenAsync(
                 new ClientCredentialsTokenRequest
                 {
