@@ -31,6 +31,9 @@ namespace ApiTwo
                     config.Authority = "https://localhost:5010/";
                     config.Audience = "ApiTwo";
                 });
+
+            services.AddHttpClient();
+
             services.AddControllers();
         }
 
@@ -46,7 +49,7 @@ namespace ApiTwo
 
             app.UseRouting();
 
-            app.UseAuthorization();
+            app.UseAuthentication();
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
