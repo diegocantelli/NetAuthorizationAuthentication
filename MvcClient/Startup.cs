@@ -23,9 +23,35 @@ namespace MvcClient
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddAuthentication()
-                .AddCookie()
-                .AddOpenIdConnect();
+            services.AddAuthentication(config => 
+            {
+                config.DefaultScheme = "Cookie";
+                config.DefaultChallengeScheme = "oidc";
+            })
+            .AddCookie("Cookie")
+            .AddOpenIdConnect("oidc", config => 
+            {
+                config.Authority = "https://localhost:5010/";
+
+                //Identifica quem é esta aplicação. Para que possa acessar o server do identity, este valor precisa estar cadastrado
+                //como um client
+                config.ClientId = "client_id_mvc";
+
+                config.ClientSecret = "client_secret_mvc";
+
+                //Irá gravar o cookie no token
+                config.SaveTokens = true;
+
+                //O tipo de resposta que irá obter do servidor de autenticação
+                //Token: irá retornar o access_token
+                //Id_Token: irá retornar apenas se está autenticado ou não
+                config.ResponseType = "code";
+
+                //Informa que irá acessar a apiOne, para isso o identity server irá olhar os clients cadastrados e irá
+                //checar se o respectivo client possui este scope cadastrado
+                //config.Scope.Add("ApiOne");
+            });
+
             services.AddControllersWithViews();
         }
 

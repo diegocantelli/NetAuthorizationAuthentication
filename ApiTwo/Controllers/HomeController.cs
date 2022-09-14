@@ -17,7 +17,7 @@ namespace ApiTwo.Controllers
             _httpClientFactory = httpClientFactory;
         }
 
-        [Route("/")]
+        [Route("/Home")]
         public async Task<IActionResult> Index()
         {
             var serverClient = _httpClientFactory.CreateClient();
