@@ -1,4 +1,5 @@
 ﻿using IdentityModel;
+using IdentityServer4;
 using IdentityServer4.Models;
 using System;
 using System.Collections.Generic;
@@ -12,7 +13,8 @@ namespace IdentityServer
         public static IEnumerable<IdentityResource> GetIdentityResources() =>
             new List<IdentityResource>
             {
-                new IdentityResources.OpenId()
+                new IdentityResources.OpenId(),
+                new IdentityResources.Profile()
             };
 
         public static IEnumerable<ApiResource> GetApis() =>
@@ -68,6 +70,8 @@ namespace IdentityServer
                     AllowedScopes = {
                         "ApiOne", 
                         "ApiTwo",
+                        "openid", //openid - scopo obrigatório ao se usar openId
+                        IdentityServerConstants.StandardScopes.Profile
                         //new IdentityResources.OpenId().Name, //openid - scopo obrigatório ao se usar openId
                         //new IdentityResources.Profile().Name, //profile - scopo obrigatório ao se usar openId
                     }
