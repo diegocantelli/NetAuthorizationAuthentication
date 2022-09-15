@@ -27,6 +27,7 @@ namespace IdentityServer
             ///.well-known/openid-configuration
             services.AddIdentityServer()
                 .AddInMemoryApiResources(ConfigurationClientApis.GetApis())
+                .AddInMemoryIdentityResources(ConfigurationClientApis.GetIdentityResources())
                 .AddInMemoryClients(ConfigurationClientApis.GetClients())
                 .AddDeveloperSigningCredential();
 

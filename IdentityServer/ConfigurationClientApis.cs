@@ -9,6 +9,12 @@ namespace IdentityServer
 {
     public static class ConfigurationClientApis
     {
+        public static IEnumerable<IdentityResource> GetIdentityResources() =>
+            new List<IdentityResource>
+            {
+                new IdentityResources.OpenId()
+            };
+
         public static IEnumerable<ApiResource> GetApis() =>
             new List<ApiResource> 
             { 
@@ -54,8 +60,10 @@ namespace IdentityServer
                     ClientId = "client_id_mvc",
                     ClientSecrets = {new Secret("client_secret_mvc".ToSha256())},
                     AllowedGrantTypes = GrantTypes.Code,
-                    RedirectUris = { "https://localhost:5050" }, //aponta pro endereço do proprio projeto MvcClient
-                    //RedirectUris = { "https://localhost:5050/signin-oidc" },
+
+                    //aponta pro endereço do proprio projeto MvcClient
+                    //signin-oidc faz parte do padrao oidc e é pra onde o identity server deverá retornar a requisição
+                    RedirectUris = { "https://localhost:5050/signin-oidc" }, 
 
                     AllowedScopes = {
                         "ApiOne", 
