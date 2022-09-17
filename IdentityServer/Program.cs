@@ -23,6 +23,9 @@ namespace IdentityServer
 
                 var user = new IdentityUser("bob");
                 userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
+
+                // para que funcione e seja preenchido o valor dessa claim no objeto User.Claim é necessário adicionar teste.claim
+                // como um apiresouce que possua esta user claim
                 userManager.AddClaimAsync(user, new System.Security.Claims.Claim("teste.claim", "teste"))
                     .GetAwaiter().GetResult();
             };

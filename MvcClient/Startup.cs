@@ -47,6 +47,12 @@ namespace MvcClient
                 //Id_Token: irá retornar apenas se está autenticado ou não
                 config.ResponseType = "code";
 
+                // faz "2 viagens" para poder carregar as claims no cookie
+                // mas o tamanho do idToken é menor
+                config.GetClaimsFromUserInfoEndpoint = true;
+
+                config.Scope.Add("rc.scope");
+
                 //Informa que irá acessar a apiOne, para isso o identity server irá olhar os clients cadastrados e irá
                 //checar se o respectivo client possui este scope cadastrado
                 //config.Scope.Add("ApiOne");

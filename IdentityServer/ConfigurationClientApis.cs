@@ -14,7 +14,17 @@ namespace IdentityServer
             new List<IdentityResource>
             {
                 new IdentityResources.OpenId(),
-                new IdentityResources.Profile()
+                new IdentityResources.Profile(),
+                new IdentityResource()
+                {
+                    Name = "rc.scope",
+                    UserClaims =
+                    {
+                        //para essa claim ser incluida dentro do idToken, o nome tem que bater com o nome dado para a claim
+                        //que se deseja exibir(no caso em program.cs)
+                        "teste.claim"
+                    }
+                }
             };
 
         public static IEnumerable<ApiResource> GetApis() =>
@@ -71,13 +81,15 @@ namespace IdentityServer
                         "ApiOne", 
                         "ApiTwo",
                         "openid", //openid - scopo obrigatório ao se usar openId
-                        IdentityServerConstants.StandardScopes.Profile
+                        IdentityServerConstants.StandardScopes.Profile,
+                        "rc.scope"
                         //new IdentityResources.OpenId().Name, //openid - scopo obrigatório ao se usar openId
                         //new IdentityResources.Profile().Name, //profile - scopo obrigatório ao se usar openId
                     },
                     //não pede a tela de consentimento ao usuário
                     RequireConsent = false,
 
+                    // coloca todas as claims no idtoken
                     AlwaysIncludeUserClaimsInIdToken = true
                 }
             };
