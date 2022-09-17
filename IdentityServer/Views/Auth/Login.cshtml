@@ -1,6 +1,7 @@
 ﻿@model IdentityServer.Controllers.LoginViewModel
 
 <form asp-controller="Auth" asp-action="Login" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
     <div>
         <label>Username</label>
         <input asp-for="Username" />
