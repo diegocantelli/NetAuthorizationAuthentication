@@ -5,6 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
+	<PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.28" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore" Version="3.1.28" />
+	<PackageReference Include="Microsoft.EntityFrameworkCore.InMemory" Version="3.1.28" />
     <PackageReference Include="IdentityServer4" Version="3.0.2" />
   </ItemGroup>
 
