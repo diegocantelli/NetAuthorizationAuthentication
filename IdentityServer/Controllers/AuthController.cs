@@ -10,18 +10,25 @@ namespace IdentityServer.Controllers
     public class AuthController : Controller
     {
         private readonly SignInManager<IdentityUser> _signInManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
         public AuthController(
-            SignInManager<IdentityUser> signInManager)
+            SignInManager<IdentityUser> signInManager,
+            UserManager<IdentityUser> userManager)
         {
             _signInManager = signInManager;
+            _userManager = userManager;
         }
+
+        // O IdentityServer possui essa rota configurada em sua classe startup e o framework do identity irá passar
+        // o parametro returnUrl
         [HttpGet]
         public IActionResult Login(string returnUrl)
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
         }
 
+        // O formulário de login irá repassar para este método as informações de username, password e returnUrl via método Post
         [HttpPost]
         public async Task<IActionResult> Login(LoginViewModel vm)
         {
@@ -29,12 +36,33 @@ namespace IdentityServer.Controllers
 
             if (result.Succeeded)
             {
+                //Irá retornar para uma url conhecida do identity
                 return Redirect(vm.ReturnUrl);
             } 
             else if (result.IsLockedOut)
             {
 
             }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult Register(string returnUrl)
+        {
+            return View(new RegisterViewModel { ReturnUrl = returnUrl });
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Register(RegisterViewModel vm)
+        {
+            var user = new IdentityUser(vm.Username);
+            var result = await _userManager.CreateAsync(user, vm.Password);
+
+            if (result.Succeeded)
+            {
+                Redirect(vm.ReturnUrl);
+            }
+
             return View();
         }
 

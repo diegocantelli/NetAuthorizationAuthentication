@@ -74,7 +74,9 @@ namespace IdentityServer
                         IdentityServerConstants.StandardScopes.Profile
                         //new IdentityResources.OpenId().Name, //openid - scopo obrigatório ao se usar openId
                         //new IdentityResources.Profile().Name, //profile - scopo obrigatório ao se usar openId
-                    }
+                    },
+                    //não pede a tela de consentimento ao usuário
+                    RequireConsent = false
                 }
             };
     }
