@@ -49,6 +49,7 @@ namespace IdentityServer
             //com essas configurações ficará disponível o endpoint que terá informações sobre o identityserver
             ///.well-known/openid-configuration
             services.AddIdentityServer()
+                .AddAspNetIdentity<IdentityUser>()//resolve o erro de sub claim
                 .AddInMemoryApiResources(ConfigurationClientApis.GetApis())
                 .AddInMemoryIdentityResources(ConfigurationClientApis.GetIdentityResources())
                 .AddInMemoryClients(ConfigurationClientApis.GetClients())
