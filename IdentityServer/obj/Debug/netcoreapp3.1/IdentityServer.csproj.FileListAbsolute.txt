@@ -73,3 +73,4 @@ C:\Users\Prosoft\source\repos\Authentication\IdentityServer\bin\Debug\netcoreapp
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Login.cshtml.g.cs
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\_ViewImports.cshtml.g.cs
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\bin\Debug\netcoreapp3.1\IdentityServer4.AspNetIdentity.dll
+C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\Razor\Views\Auth\Register.cshtml.g.cs

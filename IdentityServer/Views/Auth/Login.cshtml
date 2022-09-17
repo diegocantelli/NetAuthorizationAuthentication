@@ -13,4 +13,7 @@
     <div>
         <button type="submit">Sign In</button>
     </div>
+
+    @*asp-route-returnUrl: irá adicionar na rota um parâmetro chamado returnUrl com o valor informado*@
+    <a asp-controller="Auth" asp-action="Register" asp-route-returnUrl="@Model.ReturnUrl">Register</a>
 </form>

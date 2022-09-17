@@ -1,0 +1,25 @@
+﻿@model IdentityServer.Controllers.RegisterViewModel
+
+<form asp-controller="Auth" asp-action="Register" method="post">
+    <input type="hidden" asp-for="ReturnUrl" />
+    <div>
+        <label>Username</label>
+        <input asp-for="Username" />
+        <span asp-validation-for="Username" />
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="Password" />
+        <span asp-validation-for="Password" />
+    </div>
+    <div>
+        <label>Password</label>
+        <input asp-for="ConfirmPassword" />
+        <span asp-validation-for="ConfirmPassword" />
+    </div>
+    <div>
+        <button type="submit">Sign Up</button>
+    </div>
+    @*asp-route-returnUrl: irá adicionar na rota um parâmetro chamado returnUrl com o valor informado*@
+    <a asp-controller="Auth" asp-action="Login" asp-route-returnUrl="@Model.ReturnUrl">Back to Login</a>
+</form>

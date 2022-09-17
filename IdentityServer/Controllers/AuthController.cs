@@ -55,12 +55,18 @@ namespace IdentityServer.Controllers
         [HttpPost]
         public async Task<IActionResult> Register(RegisterViewModel vm)
         {
+            if (!ModelState.IsValid)
+            {
+                return View(vm);
+            }
+
             var user = new IdentityUser(vm.Username);
             var result = await _userManager.CreateAsync(user, vm.Password);
 
             if (result.Succeeded)
             {
-                Redirect(vm.ReturnUrl);
+                await _signInManager.SignInAsync(user, false);
+                return Redirect(vm.ReturnUrl);
             }
 
             return View();
