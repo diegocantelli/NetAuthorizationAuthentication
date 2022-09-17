@@ -20,8 +20,12 @@ namespace IdentityServer
             using (var scope = host.Services.CreateScope())
             {
                 var userManager = scope.ServiceProvider.GetRequiredService<UserManager<IdentityUser>>();
-            }
-            .Run();
+
+                var user = new IdentityUser("bob");
+                userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
+            };
+            
+            host.Run();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
