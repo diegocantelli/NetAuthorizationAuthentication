@@ -23,6 +23,8 @@ namespace IdentityServer
 
                 var user = new IdentityUser("bob");
                 userManager.CreateAsync(user, "password").GetAwaiter().GetResult();
+                userManager.AddClaimAsync(user, new System.Security.Claims.Claim("teste.claim", "teste"))
+                    .GetAwaiter().GetResult();
             };
             
             host.Run();

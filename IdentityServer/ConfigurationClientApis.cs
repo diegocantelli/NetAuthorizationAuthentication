@@ -76,7 +76,9 @@ namespace IdentityServer
                         //new IdentityResources.Profile().Name, //profile - scopo obrigatório ao se usar openId
                     },
                     //não pede a tela de consentimento ao usuário
-                    RequireConsent = false
+                    RequireConsent = false,
+
+                    AlwaysIncludeUserClaimsInIdToken = true
                 }
             };
     }
