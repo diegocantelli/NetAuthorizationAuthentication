@@ -59,11 +59,14 @@ namespace MvcClient
                 config.GetClaimsFromUserInfoEndpoint = true;
 
                 config.Scope.Add("rc.scope");
+                config.Scope.Add("ApiOne");
 
                 //Informa que irá acessar a apiOne, para isso o identity server irá olhar os clients cadastrados e irá
                 //checar se o respectivo client possui este scope cadastrado
                 //config.Scope.Add("ApiOne");
             });
+
+            services.AddHttpClient();
 
             services.AddControllersWithViews();
         }

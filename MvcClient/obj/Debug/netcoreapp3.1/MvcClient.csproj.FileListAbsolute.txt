@@ -43,3 +43,5 @@ C:\Users\Prosoft\source\repos\Authentication\MvcClient\obj\Debug\netcoreapp3.1\M
 C:\Users\Prosoft\source\repos\Authentication\MvcClient\obj\Debug\netcoreapp3.1\MvcClient.dll
 C:\Users\Prosoft\source\repos\Authentication\MvcClient\obj\Debug\netcoreapp3.1\MvcClient.pdb
 C:\Users\Prosoft\source\repos\Authentication\MvcClient\obj\Debug\netcoreapp3.1\MvcClient.genruntimeconfig.cache
+C:\Users\Prosoft\source\repos\Authentication\MvcClient\bin\Debug\netcoreapp3.1\IdentityModel.dll
+C:\Users\Prosoft\source\repos\Authentication\MvcClient\bin\Debug\netcoreapp3.1\System.Text.Encodings.Web.dll

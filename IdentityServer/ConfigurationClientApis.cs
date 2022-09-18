@@ -1,10 +1,7 @@
 ﻿using IdentityModel;
 using IdentityServer4;
 using IdentityServer4.Models;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace IdentityServer
 {
@@ -33,7 +30,9 @@ namespace IdentityServer
                 //Aqui são informadas as apis que se deseja proteger via autorização
                 //No endpoint do servidor de identidade, ao acessar o endpoint well-known/openid-configuration, na chave
                 //scopes_supported as apis abaixo devem ser listadas
-                new ApiResource("ApiOne"),
+                new ApiResource("ApiOne", 
+                    new string[]{ "teste.api.claim"} //esta claim ficará disponível apenas ao acessar a ApiOne
+                    ),
                 new ApiResource("ApiTwo"),
                 //new ApiResource
                 //{

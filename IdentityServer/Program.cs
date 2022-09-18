@@ -28,6 +28,9 @@ namespace IdentityServer
                 // como um apiresouce que possua esta user claim
                 userManager.AddClaimAsync(user, new System.Security.Claims.Claim("teste.claim", "teste"))
                     .GetAwaiter().GetResult();
+
+                userManager.AddClaimAsync(user, new System.Security.Claims.Claim("teste.api.claim", "teste.api"))
+                    .GetAwaiter().GetResult();
             };
             
             host.Run();
