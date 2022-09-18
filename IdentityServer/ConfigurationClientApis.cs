@@ -88,6 +88,9 @@ namespace IdentityServer
                     //não pede a tela de consentimento ao usuário
                     RequireConsent = false,
 
+                    // configuração necessária para poder obter o refresh token
+                    AllowOfflineAccess = true,
+
                     // coloca todas as claims no idtoken
                     AlwaysIncludeUserClaimsInIdToken = true
                 }
