@@ -61,6 +61,9 @@ namespace MvcClient
                 config.Scope.Add("rc.scope");
                 config.Scope.Add("ApiOne");
 
+                //necessário informar este scope para poder obter o refresh token
+                config.Scope.Add("offline_access");
+
                 //Informa que irá acessar a apiOne, para isso o identity server irá olhar os clients cadastrados e irá
                 //checar se o respectivo client possui este scope cadastrado
                 //config.Scope.Add("ApiOne");
