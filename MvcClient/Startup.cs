@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -46,6 +47,12 @@ namespace MvcClient
                 //Token: irá retornar o access_token
                 //Id_Token: irá retornar apenas se está autenticado ou não
                 config.ResponseType = "code";
+
+                // deletando claims que não serão úteis no access_token
+                config.ClaimActions.DeleteClaim("amr");
+                config.ClaimActions.DeleteClaim("s_hash");
+
+                //config.ClaimActions.MapUniqueJsonKey("rc.teste", "teste.claim");
 
                 // faz "2 viagens" para poder carregar as claims no cookie
                 // mas o tamanho do idToken é menor
