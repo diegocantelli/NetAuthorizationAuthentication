@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31409.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdenittyExample", "IdenittyExample\IdenittyExample.csproj", "{36136E65-2F28-4C45-A110-F5689A2FDCB8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdenittyExample", "IdenittyExample\IdenittyExample.csproj", "{36136E65-2F28-4C45-A110-F5689A2FDCB8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasicAuthNew", "BasicAuthNew\BasicAuthNew.csproj", "{35DE01DD-1D1C-4E5F-BA93-42BE757A6AEB}"
 EndProject
@@ -11,21 +11,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "basic", "basic", "{C0C0B907
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "oauth", "oauth", "{F85EB1AA-18C5-4ABA-B131-629D86307CC0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "server", "server\server.csproj", "{F90E6C82-2613-4D22-9B94-73BBDFD03A20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "server", "server\server.csproj", "{F90E6C82-2613-4D22-9B94-73BBDFD03A20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Client", "Client\Client.csproj", "{5830F2FC-989E-4819-A666-D33F664D55DE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{5830F2FC-989E-4819-A666-D33F664D55DE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "api", "api\api.csproj", "{FCF2BCD3-E5AB-4006-AE15-7A53E731C4A0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "api", "api\api.csproj", "{FCF2BCD3-E5AB-4006-AE15-7A53E731C4A0}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityServer4", "IdentityServer4", "{B60CADE3-A058-4CC8-A42F-6B9FFC46F85A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{97941522-550C-4024-A494-90AEE0E98F63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityServer", "IdentityServer\IdentityServer.csproj", "{97941522-550C-4024-A494-90AEE0E98F63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiOne", "ApiOne\ApiOne.csproj", "{93F7C754-175B-469F-AD62-3E181A9410C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiOne", "ApiOne\ApiOne.csproj", "{93F7C754-175B-469F-AD62-3E181A9410C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApiTwo", "ApiTwo\ApiTwo.csproj", "{394BD69D-9D82-4DE9-B26F-FC656A2659D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ApiTwo", "ApiTwo\ApiTwo.csproj", "{394BD69D-9D82-4DE9-B26F-FC656A2659D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcClient", "MvcClient\MvcClient.csproj", "{A22FEC58-8F18-4EBC-A17F-938925597501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcClient", "MvcClient\MvcClient.csproj", "{A22FEC58-8F18-4EBC-A17F-938925597501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JavaScriptClient", "JavaScriptClient\JavaScriptClient.csproj", "{FBD6E3BF-4902-43AD-8949-02F8C4D566EF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{A22FEC58-8F18-4EBC-A17F-938925597501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A22FEC58-8F18-4EBC-A17F-938925597501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A22FEC58-8F18-4EBC-A17F-938925597501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FBD6E3BF-4902-43AD-8949-02F8C4D566EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FBD6E3BF-4902-43AD-8949-02F8C4D566EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FBD6E3BF-4902-43AD-8949-02F8C4D566EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FBD6E3BF-4902-43AD-8949-02F8C4D566EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -83,6 +89,7 @@ Global
 		{93F7C754-175B-469F-AD62-3E181A9410C4} = {B60CADE3-A058-4CC8-A42F-6B9FFC46F85A}
 		{394BD69D-9D82-4DE9-B26F-FC656A2659D3} = {B60CADE3-A058-4CC8-A42F-6B9FFC46F85A}
 		{A22FEC58-8F18-4EBC-A17F-938925597501} = {B60CADE3-A058-4CC8-A42F-6B9FFC46F85A}
+		{FBD6E3BF-4902-43AD-8949-02F8C4D566EF} = {B60CADE3-A058-4CC8-A42F-6B9FFC46F85A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0B46E514-CF17-4537-B3F5-55CAF27F209E}
