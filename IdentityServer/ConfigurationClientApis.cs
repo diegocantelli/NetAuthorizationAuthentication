@@ -93,6 +93,22 @@ namespace IdentityServer
 
                     // coloca todas as claims no idtoken
                     AlwaysIncludeUserClaimsInIdToken = true
+                },
+                new Client
+                {
+                    ClientId = "client_id_js",
+                    AllowedGrantTypes = GrantTypes.Implicit,
+                    RedirectUris = { "https://localhost:5080/signin" },
+                    AllowedScopes =
+                    {
+                        IdentityServerConstants.StandardScopes.OpenId,
+                        "ApiOne"
+                    },
+
+                    // permite que o access_token seja armazenado no browser
+                    AllowAccessTokensViaBrowser = true,
+
+                    RequireConsent = false
                 }
             };
     }
