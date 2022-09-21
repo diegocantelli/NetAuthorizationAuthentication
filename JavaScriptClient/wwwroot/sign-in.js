@@ -9,7 +9,7 @@ var createNonce = function () {
 
 
 var signIn = function () {
-    var redirectUri = "https://localhost:5080/signin";
+    var redirectUri = "https://localhost:5080/home/signin";
     var responseType = "id_token token";
     var scope = "openid ApiOne";
     var authUrl = "/connect/authorize/callback" +

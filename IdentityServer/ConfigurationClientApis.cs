@@ -98,7 +98,7 @@ namespace IdentityServer
                 {
                     ClientId = "client_id_js",
                     AllowedGrantTypes = GrantTypes.Implicit,
-                    RedirectUris = { "https://localhost:5080/signin" },
+                    RedirectUris = { "https://localhost:5080/home/signin" },
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

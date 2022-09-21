@@ -29,3 +29,4 @@ C:\Users\Prosoft\source\repos\Authentication\JavaScriptClient\obj\Debug\netcorea
 C:\Users\Prosoft\source\repos\Authentication\JavaScriptClient\obj\Debug\netcoreapp3.1\JavaScriptClient.genruntimeconfig.cache
 C:\Users\Prosoft\source\repos\Authentication\JavaScriptClient\obj\Debug\netcoreapp3.1\JavaScriptClient.csproj.CopyComplete
 C:\Users\Prosoft\source\repos\Authentication\JavaScriptClient\obj\Debug\netcoreapp3.1\JavaScriptClient.csprojAssemblyReference.cache
+C:\Users\Prosoft\source\repos\Authentication\JavaScriptClient\obj\Debug\netcoreapp3.1\Razor\Views\Home\SignIn.cshtml.g.cs
