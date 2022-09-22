@@ -108,6 +108,9 @@ namespace IdentityServer
                     // permite que o access_token seja armazenado no browser
                     AllowAccessTokensViaBrowser = true,
 
+                    //habilitando o cors para poder acessar com outro domínio diferente
+                    AllowedCorsOrigins = { "https://localhost:5080" },
+
                     RequireConsent = false
                 }
             };
