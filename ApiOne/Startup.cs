@@ -31,6 +31,13 @@ namespace ApiOne
                     config.Authority = "https://localhost:5010/";
                     config.Audience = "ApiOne";
                 });
+
+            services.AddCors(config =>
+                config.AddPolicy("AllowAll",
+                    p => p.AllowAnyOrigin()
+                        .AllowAnyMethod()
+                        .AllowAnyHeader()));
+
             services.AddControllers();
         }
 
@@ -43,6 +50,8 @@ namespace ApiOne
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors("AllowAll");
 
             app.UseRouting();
 

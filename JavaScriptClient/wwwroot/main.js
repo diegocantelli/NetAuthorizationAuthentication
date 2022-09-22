@@ -10,4 +10,21 @@ var userManager = new Oidc.UserManager(config);
 
 var signIn = function () {
     userManager.signinRedirect();
+};
+
+userManager.getUser().then(user => {
+    console.log("user:", user);
+
+    if (user) {
+        axios.defaults.headers.common["Authorization"] = "Bearer " + user.access_token
+    }
+});
+
+var callApi = function () {
+    axios.get("https://localhost:5020/secret")
+        .then(res => {
+            console.log(res);
+        });
 }
+
+
