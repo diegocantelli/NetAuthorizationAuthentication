@@ -7,3 +7,7 @@
 };
 
 var userManager = new Oidc.UserManager(config);
+
+var signIn = function () {
+    userManager.signinRedirect();
+}
