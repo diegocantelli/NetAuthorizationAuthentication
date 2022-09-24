@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "HMfFALI+2JZUZ0IL3P+AK/FF6dKg/QDq9Wl31Du+Zf9MActAaBIG8kZ7yJK7B0+n00eSNYNmQJI7Rp7su0slAw==",
+  "dgSpecHash": "0jr1Z+/pFN9dWCH37okA6Rc33f/58LSlL9ycBf41oatO4B5uyU8gt77T47oTPoj8sQOsIPnuB9tV+w2QX000dw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Prosoft\\source\\repos\\Authentication\\IdentityServer\\IdentityServer.csproj",
   "expectedPackageFiles": [
@@ -17,11 +17,12 @@
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.aspnetcore.identity.entityframeworkcore\\3.1.28\\microsoft.aspnetcore.identity.entityframeworkcore.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.data.sqlclient\\1.0.19249.1\\microsoft.data.sqlclient.1.0.19249.1.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore\\3.1.28\\microsoft.entityframeworkcore.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\3.1.28\\microsoft.entityframeworkcore.abstractions.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\3.1.28\\microsoft.entityframeworkcore.analyzers.3.1.28.nupkg.sha512",
+    "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.design\\3.1.28\\microsoft.entityframeworkcore.design.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.inmemory\\3.1.28\\microsoft.entityframeworkcore.inmemory.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\3.1.28\\microsoft.entityframeworkcore.relational.3.1.28.nupkg.sha512",
     "C:\\Users\\Prosoft\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\3.0.1\\microsoft.entityframeworkcore.sqlserver.3.0.1.nupkg.sha512",
