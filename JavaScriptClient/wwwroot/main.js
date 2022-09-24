@@ -1,4 +1,5 @@
 ﻿var config = {
+    userStore: new Oidc.WebStorageStateStore({ store: window.localStorage }),
     authority: "https://localhost:5010/",
     client_id: "client_id_js",
     redirect_uri: "https://localhost:5080/home/signin",
