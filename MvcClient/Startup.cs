@@ -39,6 +39,7 @@ namespace MvcClient
                 config.ClientId = "client_id_mvc";
 
                 config.ClientSecret = "client_secret_mvc";
+                config.SignedOutCallbackPath = "/Home/Index";
 
                 //Irá gravar o cookie no token
                 config.SaveTokens = true;

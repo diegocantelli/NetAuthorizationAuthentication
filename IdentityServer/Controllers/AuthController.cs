@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using IdentityServer4.Services;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -11,13 +12,16 @@ namespace IdentityServer.Controllers
     {
         private readonly SignInManager<IdentityUser> _signInManager;
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly IIdentityServerInteractionService _identityServerInteractionService;
 
         public AuthController(
             SignInManager<IdentityUser> signInManager,
-            UserManager<IdentityUser> userManager)
+            UserManager<IdentityUser> userManager,
+            IIdentityServerInteractionService identityServerInteractionService)
         {
             _signInManager = signInManager;
             _userManager = userManager;
+            _identityServerInteractionService = identityServerInteractionService;
         }
 
         // O IdentityServer possui essa rota configurada em sua classe startup e o framework do identity irá passar
@@ -26,6 +30,21 @@ namespace IdentityServer.Controllers
         public IActionResult Login(string returnUrl)
         {
             return View(new LoginViewModel { ReturnUrl = returnUrl });
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> Logout(string logoutId)
+        {
+            await _signInManager.SignOutAsync();
+
+            var logoutRequest = await _identityServerInteractionService.GetLogoutContextAsync(logoutId);
+
+            if (string.IsNullOrEmpty(logoutRequest.PostLogoutRedirectUri))
+            {
+                return RedirectToAction("Index", "Home");
+            }
+
+            return Redirect(logoutRequest.PostLogoutRedirectUri);
         }
 
         // O formulário de login irá repassar para este método as informações de username, password e returnUrl via método Post

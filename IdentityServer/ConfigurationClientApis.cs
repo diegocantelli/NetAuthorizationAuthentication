@@ -76,6 +76,8 @@ namespace IdentityServer
                     //signin-oidc faz parte do padrao oidc e é pra onde o identity server deverá retornar a requisição
                     RedirectUris = { "https://localhost:5050/signin-oidc" }, 
 
+                    PostLogoutRedirectUris = {"https://localhost:5050/home/index" },
+
                     AllowedScopes = {
                         "ApiOne", 
                         "ApiTwo",
@@ -99,6 +101,9 @@ namespace IdentityServer
                     ClientId = "client_id_js",
                     AllowedGrantTypes = GrantTypes.Implicit,
                     RedirectUris = { "https://localhost:5080/home/signin" },
+
+                    PostLogoutRedirectUris = {"https://localhost:5080/home/index" },
+
                     AllowedScopes =
                     {
                         IdentityServerConstants.StandardScopes.OpenId,

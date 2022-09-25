@@ -91,3 +91,4 @@ C:\Users\Prosoft\source\repos\Authentication\IdentityServer\bin\Debug\netcoreapp
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\staticwebassets\IdentityServer.StaticWebAssets.xml
 C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\scopedcss\bundle\IdentityServer.styles.css
+C:\Users\Prosoft\source\repos\Authentication\IdentityServer\obj\Debug\netcoreapp3.1\IdentityServer.csprojAssemblyReference.cache
