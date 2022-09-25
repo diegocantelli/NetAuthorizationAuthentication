@@ -6,17 +6,22 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using System.IO;
+using System.Security.Cryptography.X509Certificates;
 
 namespace IdentityServer
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        public Startup(IConfiguration configuration, IWebHostEnvironment env)
         {
             Configuration = configuration;
+            _env = env;
         }
 
         public IConfiguration Configuration { get; }
+
+        private readonly IWebHostEnvironment _env;
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
@@ -47,6 +52,9 @@ namespace IdentityServer
 
             var assembly = typeof(Startup).Assembly.GetName().Name;
 
+            var filePath = Path.Combine(_env.ContentRootPath, "is_cert.pfx");
+            var certificate = new X509Certificate2(filePath, "password");
+
             //com essas configurações ficará disponível o endpoint que terá informações sobre o identityserver
             ///.well-known/openid-configuration
             services.AddIdentityServer()
@@ -64,7 +72,8 @@ namespace IdentityServer
                 //.AddInMemoryApiResources(ConfigurationClientApis.GetApis())
                 //.AddInMemoryIdentityResources(ConfigurationClientApis.GetIdentityResources())
                 //.AddInMemoryClients(ConfigurationClientApis.GetClients())
-                .AddDeveloperSigningCredential();
+                //.AddDeveloperSigningCredential();
+                .AddSigningCredential(certificate);
 
             services.AddControllersWithViews();
         }
